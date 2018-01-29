@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      body aside{
+          color:white;
+      }
+        body header nav {
+            display: inline-block;
+            width: 75%;
+            margin: 0;
+            padding: 12px;
+            border: 2px solid #000;
+        }
+
+            body header nav ul li:hover > a {
+                text-decoration: underline;
+                color: #a8a8a8;
+            }
+
+            body header nav ul li a {
+                float: left;
+                margin: 0;
+                text-decoration: none;
+                color: white;
+                font: 1.4em normal Arial;
+            }
+
+          article{
+              border:1px solid black;
+              margin-top:20px;
+              float:left;
+
+          }
+        section {
+            display: inline-block;
+            float: left;
+            width:75%;
+        }
+        aside{
+            float: right;
+            display:inline-block;
+            width:25%;
+
+        }
+        aside ul{
+            list-style-type:none;
+        }
+        aside ul li{
+            border:1px solid black;
+            border-radius:5px;
+            margin:10px;
+        }
+        aside ul li h2{
+            font-weight: bold;
+          
+        }
+        aside  ul  li p {
+            margin-top: 10px;
+            margin-right: 5px;
+            margin-bottom: 10px;
+            margin-left: 5px;
+            font-size: 14px;
+        }
+
+          aside  ul  li p a {
+                color: #aaaaaa;
+                text-decoration: none;
+            }
+         aside  ul  li p strong {
+            color: #cccccc;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+          footer{
+              text-align:left;
+              color:white;
+          }
+        body footer {
+            clear: both;
+            padding-top: 15px;
+            padding-bottom: 25px;
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+            body footer p {
+            font-weight: bold;
+        }
+            .floating-box {
+            display: inline-block;
+            float: left;
+            margin: 0px;
+        }
+
+        input {
+            border-radius: 10px;
+            border-color: purple;
+        }
+
+        image {
+            float: left;
+        }
+
+        .N {
+            float: right;
+        }
+
+        nav div ul li {
+            list-style-type: none;
+            float: right;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: white;
+            font-family: Arial;
+        }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: underline;
+                color: white;
+            }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                padding: 14px 16px;
+                font: inherit;
+                text-decoration: underline;
+                margin: 0;
+                background-color: white;
+                color: white;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                text-decoration: underline;
+                color: gray;
+                background-color: white;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: purple;
+            opacity: 0.8;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+            .dropdown-content a {
+                float: none;
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .dropdown-content a:hover {
+                    background-color:purple;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="Image"> <img src="Sample Logo.png" width="300" height="80"> </span>
+        <span class="N">
+            <form>
+                <input type="text" name="kk">
+                </br>
+                <input type="text" name="kk">
+                </br >
+                <input type="button" style="width:50%;" value="Register"></input>
+            </form>
+        </span>
+        <nav>
+            <div class="navbar">
+                <a href="#home">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        Presentations
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Intro CSS Styling Course</a>
+                        <a href="#">CSS Overview</a>
+                        <a href="#">CSS Presentation</a>
+                        <a href="#">CSS Display</a>
+                        <a href="#">CSS Layout</a>
+                        <a href="#">SASS</a>
+                        <a href="#">LESS</a>
+                    </div>
+                </div>
+                <a href="#news">News</a>
+                <a href="#">Videos</a></li>
+                <a href="#">Trainers</a>
+                <a href="#">Contacts</a>
+
+            </div>
+        </nav>
+
+    </header>
+    <section>
+        <article>
+            <header>
+                <h1>
+                    Lorem ipsum dolor sit amet
+                </h1>
+                
+            </header>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas,
+                dui sed cursus placerat, felis metus sollicitudin nunc, nec venenatis augue tellus vitae nisl.
+                Quisque ut venenatis est. Vestibulum non dolor nec sapien imperdiet semper nec quis massa. Phasellus ultrices vestibulum rutrum.
+                Vestibulum auctor felis eget ipsum semper vulputate. Sed congue, metus sit amet tempus pretium, nunc sapien pellentesque elit,
+                ut porttitor eros orci nec arcu. Nunc lobortis risus eget eros viverra dapibus.
+            </p>
+            <footer>
+                "Publishes by"<a href="#">Minko Tvanov</a>"on"<time>08-jan-2013</time>"at"<time>14:51</time></p>
+            </footer>
+
+        </article>
+        <article>
+            <header>
+                <h1>
+                    Vestibulum ante ipsum primis
+                </h1>
+            </header>
+            <p>
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus eget tincidunt velit.
+                Cras sed lectus mauris. Vivamus massa lacus, laoreet nec sollicitudin eu, pharetra sed elit. Aenean quis enim dui,
+                sed mollis sapien. Duis vel eros sapien, sed blandit magna. Praesent a dolor leo, a gravida lectus. Fusce non aliquam nibh.
+                Aenean nisl dui, faucibus consequat fermentum at, rutrum congue urna. Ut fringilla tempor risus dictum aliquam.
+                Donec congue sapien et massa sagittis eget pharetra risus sollicitudin. Vestibulum urna nunc, feugiat sed tincidunt et,
+                fringilla non nisi. Mauris neque tellus, lobortis a vehicula eget, volutpat id erat. Donec rutrum consectetur malesuada.
+                Curabitur mollis orci at sapien tristique ac mattis nulla sollicitudin.
+            </p>
+            <footer>
+                "Publishes by"<a href="#">Minko Tvanov</a>"on"<time>08-jan-2013</time>"at"<time>14:51</time></p>
+            </footer>
+        </article>
+        <article>
+            <header>
+                <h1>
+                    Nullam ullamcorper dolor sed enim venenatis aliquet
+
+                </h1>
+            </header>
+            <p>
+                Nullam ullamcorper dolor sed enim venenatis aliquet. Aenean magna magna, consectetur vel gravida at, gravida ac eros.
+                Donec tincidunt iaculis diam, sit amet aliquam libero fermentum non. Donec at lectus at eros interdum lobortis nec sed massa.
+                Sed nec hendrerit magna. Nunc nec vestibulum lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                Pellentesque rutrum neque orci, quis dapibus justo. Sed id turpis a purus luctus dictum eget vitae tortor. Maecenas eu nunc in nisi
+                interdum eleifend non sed ante. Integer sit amet rutrum magna. Maecenas sed blandit quam.
+            </p>
+            <footer>
+                "Publishes by"<a href="#">Minko Tvanov</a>"on"<time>08-jan-2013</time>"at"<time>14:51</time></p>
+            </footer>
+        </article>
+    </section>
+    <aside>
+        <ul>
+            <li>
+                <h2>Widget</h2>
+                <p>
+                    Duis vel eros sapien, sed blandit magna.
+                    <a href="#">Praesent</a> a dolor leo, a gravida <strong>lectus</strong>. Fusce non aliquam nibh. Aenean nisl dui, faucibus consequat fermentum at, rutrum congue urna.
+                </p>
+            </li>
+            <li>
+                <h2>Widget</h2>
+                <p><img src="pre.PNG"> Widget Item</p>
+                <p><img src="pre.PNG"> Widget Item</p>
+                <p><img src="pre.PNG"> Widget Item</p>
+                <p><img src="pre.PNG"> Widget Item</p>
+                <li>
+                <h2>Widget</h2>
+                <p>
+                    Duis vel eros sapien, sed blandit magna.
+                    <a href="#">Praesent</a> a dolor leo, a gravida <strong>lectus</strong>. Fusce non aliquam nibh. <strong> <em>Aenean <br />nisl dui</em></strong>, faucibus consequat fermentum at, rutrum congue urna.
+                </p>
+            </li>
+        </ul>
+    </aside>
+    <footer>
+        <p>
+            Telerik Software Academy
+        </p>
+    </footer>
+</body>
+</html>
