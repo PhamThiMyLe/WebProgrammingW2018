@@ -1,0 +1,855 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>My Le</title>
+</head>
+<style>
+    a, a:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    ol, ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .both {
+        clear: both;
+    }
+
+    .menu {
+        height: 35px;
+        padding: 20px 210px;
+        border-bottom: 1px solid #E6E6E6;
+    }
+
+    .m_block_1 {
+        position: relative;
+        width: 30%;
+        float: left;
+        max-height: 30px;
+    }
+
+        .m_block_1 a {
+            height: 100%;
+        }
+
+            .m_block_1 a img.logo_ins {
+                position: absolute;
+                left: 0;
+            }
+
+            .m_block_1 a img.t_ins {
+                margin-left: 70px;
+            }
+
+            .m_block_1 a span {
+                position: absolute;
+                top: 35%;
+                left: 47px;
+                transform: translateY(-50%);
+                font-size: 35px;
+                color: #939393;
+            }
+
+    .m_block_2 {
+        width: 30%;
+        float: left;
+        height: 35px;
+        text-align: end;
+    }
+
+    input {
+        width: 215px;
+        padding-left: 90px;
+        background: url(image/ic_search_48px-128.png);
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: 35% 50%;
+        border: solid 1px #dbdbdb;
+        border-radius: 3px;
+        color: black;
+        font-size: 14px;
+        outline: none;
+        z-index: 2;
+        box-sizing: border-box;
+        height: 79%;
+        background-color: #fafafa;
+        color: black;
+    }
+
+
+    input:focus {
+        padding-left: 33px;
+        background-position: 10px;
+        background-color:white ;
+    }
+
+    .m_block_3 {
+        width: 30%;
+        float: left;
+        height: 35px;
+        text-align: right;
+    }
+
+        .m_block_3 a {
+            margin-right: 20px;
+        }
+
+            .m_block_3 a:last-child {
+                margin-right: 0;
+            }
+
+    /*---------------------------------------------------------*/
+    .content {
+        margin: 60px 207px;
+    }
+
+    .content_left {
+        float: left;
+    }
+
+    .content_right {
+        float: right;
+    }
+
+    .c_block_1 {
+        margin-right: 28px;
+        max-width: 614px;
+        width: 100%;
+        border-radius: 3px;
+        border: 1px solid #e6e6e6;
+        margin-bottom: 60px;
+        background-color: #fff;
+        margin-left: -1px;
+        margin-right: -1px;
+    }
+
+        .c_block_1 header {
+            border-bottom: 1px solid #efefef;
+            padding: 16px;
+        }
+
+    .avartar {
+        float: left;
+        margin-right: 12px;
+    }
+
+        .avartar a {
+            cursor: pointer;
+            background-color: #fafafa;
+            border-radius: 50%;
+            box-sizing: border-box;
+            display: block;
+            flex: 0 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+            .avartar a::after {
+                border: 1px solid rgba(0,0,0,.0975);
+                border-radius: 50%;
+                bottom: 0;
+                content: "";
+                left: 0;
+                pointer-events: none;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .avartar a img {
+                height: 100%;
+                width: 100%;
+            }
+
+    .name {
+        margin-top: 4px;
+    }
+
+    .n_text a {
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-left: 5px;
+        margin-left: -5px;
+    }
+
+    .img_post {
+        background-color: #efefef;
+        display: block;
+        width: 100%;
+    }
+
+    ._4rbun {
+        display: block;
+        overflow: hidden;
+    }
+
+    .img_post img {
+        height: 100%;
+        width: 100%;
+    }
+
+    ._8oo9w {
+        margin-top: 4px;
+    }
+
+    ._l9yih {
+        cursor: pointer;
+        padding: 16px 8px 8px 0;
+    }
+
+    ._8scx2 {
+        height: 24px;
+        width: 24px;
+        background-image: url(image/bg_icon.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        overflow: hidden;
+        text-indent: 110%;
+        white-space: nowrap;
+    }
+
+    .coreSpriteHeartOpen {
+        background-position: -465px -182px;
+    }
+
+    .coreSpriteComment {
+        background-position: -359px -372px;
+    }
+
+    ._mpkky {
+        margin-left: auto;
+        margin-right: -8px;
+    }
+
+    .coreSpriteSaveOpen {
+        background-position: -465px 0;
+    }
+
+    .likes {
+        margin-bottom: 8px;
+    }
+
+        .likes a {
+            font-weight: 600;
+            color: #262626;
+        }
+
+    ul.commnet li {
+        overflow: hidden;
+        padding-bottom: 6px;
+        position: relative;
+        word-wrap: break-word;
+        margin-top: -5px;
+        padding-top: 5px;
+    }
+
+        ul.commnet li a {
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-left: 5px;
+            margin-left: -5px;
+        }
+
+        ul.commnet li:last-child {
+            padding-bottom: 0;
+        }
+
+    .time {
+        margin-bottom: 4px;
+    }
+
+        .time a {
+            color: #999;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+            .time a time {
+                font-size: 10px;
+                letter-spacing: .2px;
+                line-height: 18px;
+            }
+
+    .add_comment {
+        padding-right: 26px;
+        border-top: 1px solid #efefef;
+        color: #999;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 16px 0;
+    }
+
+        .add_comment textarea {
+            background: 0 0;
+            border: none;
+            color: #262626;
+            font-size: inherit;
+            height: 18px;
+            max-height: 80px;
+            outline: none;
+            padding: 0;
+            resize: none;
+        }
+
+    .c_block_2 {
+        margin-right: 28px;
+        width: 250px;
+    }
+
+    ._c_r_1 {
+        flex-direction: row;
+        height: 100%;
+        margin-bottom: 12px;
+        width: 100%;
+        padding-left: 5px;
+        margin-top: 5px;
+        position: relative;
+    }
+
+    ._c_r_1_avartar {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-color: #fafafa;
+        border-radius: 50%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    ._c_r_1_user {
+        position: absolute;
+        left: 30%;
+        top: 10px;
+        cursor: pointer;
+    }
+
+    ._c_r_1_alias a {
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    ._c_r_1_name {
+        color: #999;
+        font-size: 12px;
+        line-height: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    hr {
+        border-top: 1px solid #efefef;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .c_r_2 {
+        margin-bottom: 12px;
+    }
+
+        .c_r_2 span {
+            color: #999;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .c_r_2 a {
+            color: #262626;
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+    .c_r_3 ._c_r_1 canvas {
+        transform: translate(-5px, -5px);
+        position: absolute;
+        top: -0.5px;
+        left: 5px;
+        width: 60px;
+        height: 60px;
+        background: url("image/download.png") no-repeat;
+    }
+
+    .c_r_3 ._c_r_1_user ._c_r_1_alias {
+        font-weight: bold;
+    }
+
+    .c_r_3 ._c_r_1_user ._c_r_1_time {
+        font-size: 10px;
+        line-height: 12px;
+        color: #999;
+    }
+
+    ._links {
+        margin-top: 12px;
+        margin-bottom: 16px;
+    }
+
+        ._links li {
+            display: inline-block;
+        }
+
+            ._links li a {
+                color: #c7c7c7;
+                font-size: 11px;
+                font-weight: 400;
+                line-height: 13px;
+                text-transform: capitalize;
+                margin: 0;
+            }
+
+            ._links li span {
+                color: #c7c7c7;
+                cursor: pointer;
+                font-size: 11px;
+                font-weight: 400;
+                line-height: 13px;
+                text-transform: capitalize;
+                display: inline-block;
+                position: relative;
+            }
+
+                ._links li span select {
+                    cursor: pointer;
+                    height: 100%;
+                    left: 0;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                }
+
+    option {
+        font-weight: normal;
+        display: block;
+        white-space: pre;
+        min-height: 1.2em;
+        padding: 0px 2px 1px;
+    }
+
+    ._1gmap {
+        text-transform: uppercase;
+        color: #c7c7c7;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 13px;
+    }
+
+    ._rewi8 {
+        height: 100%;
+        width: 100%;
+    }
+
+
+</style>
+<body>
+    <main>
+        <div class="menu">
+            <div class="m_block_1">
+                <a href="#">
+                    <img class="logo_ins" src="https://png.icons8.com/ios/30/000000/instagram-new.png">
+                    <span>|</span>
+                    <img class="t_ins" src="Instagram_logo_svg.png">
+                </a>
+            </div>
+            <div class="m_block_2" >
+                <input id="Search-Input" type="text" placeholder="Search" />
+            </div>
+            <div class="m_block_3">
+                <a href="#"><i class="material-icons" style="font-size:36px">explore</i></a>
+                <a href="#"><img style="width:35px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK2Zndxukxoic1-URQedegPmRFLpPf5q5H0yifkvIhnq7iaAYXxw" /></a>
+                <a href="#"><i class="material-icons" style="font-size:36px">perm_identity</i></a>
+            </div>
+        </div>
+        <div class="both"></div>
+
+        <div class="content">
+            <div class="content_left">
+                <div class="c_block_1">
+                    <header>
+                        <div class="avartar">
+                            <a class="" href="#" style="width: 30px; height: 30px;">
+                                <img src="https://instagram.fsgn2-2.fna.fbcdn.net/vp/c3c37f59f90ac1b5a11f86511fb2848c/5B35997A/t51.2885-19/s150x150/10268746_417286601800211_929284122_a.jpg">
+                            </a>
+                        </div>
+                        <div class="name">
+                            <div class="n_text">
+                                <a title="guuvn" href="https://www.instagram.com/guuvn/">guuvn</a>
+                            </div>
+                            <div class=""></div>
+                        </div>
+                        <div class="both"></div>
+                    </header>
+                    <section class="img_post">
+                        <div class="_4rbun">
+                            <img src="https://instagram.fsgn2-2.fna.fbcdn.net/vp/d4bbc1139ade581366929d86fd48a553/5B4DCA29/t51.2885-15/e35/28429377_215226785694611_1045600528261709824_n.jpg">
+                        </div>
+                        <div class="_si7dy"></div>
+                    </section>
+                    <div style="padding: 0 16px;">
+                        <section class="_hmd6j _8oo9w">
+                            <a class="_eszkz _l9yih" href="#" role="button" aria-disabled="false">
+                                <span class="_8scx2 coreSpriteHeartOpen">Like</span>
+                            </a>
+                            <a class="_p6oxf _l9yih" href="#" role="button">
+                                <span class="_8scx2 coreSpriteComment">Comment</span>
+                            </a>
+                            <a class="_mpkky _l9yih" href="#" role="button" aria-disabled="false">
+                                <span class="_8scx2 coreSpriteSaveOpen">Save</span>
+                            </a>
+                        </section>
+                        <section class="likes">
+                            <div class="_3gwk6 _nt9ow">
+                                <a class="_nzn1h" href="/p/Bf8bZRXjHOX/liked_by/">
+                                    <span>520</span> likes
+                                </a>
+                            </div>
+                        </section>
+                        <ul class="commnet">
+                            <li class="">
+                                <a class="_2g7d5 notranslate _95hvo" title="" href="#">quangdung0501</a>
+                                <span>
+                                    <span>
+                                        <span>
+                                            A beautiful woman delights the eye; a wise woman, the understanding; a pure one, the soul.
+
+                                        </span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="time">
+                            <a href="#">
+                                <time datetime="" title="">6 hours ago</time>
+                            </a>
+                        </div>
+                        <section class="add_comment">
+                            <form>
+                                <textarea aria-label="Add a comment…" class="_bilrf" placeholder="Add a comment…" style="height: 18px;"></textarea>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="c_block_1">
+                    <header>
+                        <div class="avartar">
+                            <a class="" href="#" style="width: 30px; height: 30px;">
+                                <img src="https://instagram.fsgn2-2.fna.fbcdn.net/vp/c3c37f59f90ac1b5a11f86511fb2848c/5B35997A/t51.2885-19/s150x150/10268746_417286601800211_929284122_a.jpg">
+                            </a>
+                        </div>
+                        <div class="name">
+                            <div class="n_text">
+                                <a title="guuvn" href="https://www.instagram.com/guuvn/">guuvn</a>
+                            </div>
+                            <div class=""></div>
+                        </div>
+                        <div class="both"></div>
+                    </header>
+                    <section class="img_post">
+                        <div class="_4rbun">
+                            <img src="https://instagram.fsgn2-2.fna.fbcdn.net/vp/d4f5d71a9f20dfb1cf3070baddbc98df/5B41AEF7/t51.2885-15/e35/28435059_2012569052403232_2321884986942160896_n.jpg">
+                        </div>
+                        <div class="_si7dy"></div>
+                    </section>
+                    <div style="padding: 0 16px;">
+                        <section class="_hmd6j _8oo9w">
+                            <a class="_eszkz _l9yih" href="#" role="button" aria-disabled="false">
+                                <span class="_8scx2 coreSpriteHeartOpen">Like</span>
+                            </a>
+                            <a class="_p6oxf _l9yih" href="#" role="button">
+                                <span class="_8scx2 coreSpriteComment">Comment</span>
+                            </a>
+                            <a class="_mpkky _l9yih" href="#" role="button" aria-disabled="false">
+                                <span class="_8scx2 coreSpriteSaveOpen">Save</span>
+                            </a>
+                        </section>
+                        <section class="likes">
+                            <div class="_3gwk6 _nt9ow">
+                                <a class="_nzn1h" href="/p/Bf8bZRXjHOX/liked_by/">
+                                    <span>520</span> likes
+                                </a>
+                            </div>
+                        </section>
+                        <ul class="commnet">
+                            <li class="">
+                                <a class="_2g7d5 notranslate _95hvo" title="" href="#">quangdung0501</a>
+                                <span>
+                                    <span>
+                                        <span>
+                                            The most beautiful things are not associated with money; they are memories and moments. If you don't celebrate those, they can pass you by.
+
+                                        </span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="time">
+                            <a href="#">
+                                <time datetime="" title="">6 hours ago</time>
+                            </a>
+                        </div>
+                        <section class="add_comment">
+                            <form>
+                                <textarea aria-label="Add a comment…" class="_bilrf" placeholder="Add a comment…" style="height: 18px;"></textarea>
+                            </form>
+                        </section>
+                    </div>
+
+                </div>
+
+                <div class="c_block_1">
+                    <header>
+                        <div class="avartar">
+                            <a class="" href="#" style="width: 30px; height: 30px;">
+                                <img src="https://instagram.fsgn2-3.fna.fbcdn.net/vp/f3d44f3ce267135ea5b8b8784d3e7df8/5B43AC40/t51.2885-19/s150x150/22426911_275731229604342_8626984912630579200_n.jpg"/>
+                            </a>
+                        </div>
+                        <div class="name">
+                            <div class="n_text">
+                                <a title="guuvn" href="https://www.instagram.com/guuvn/">ha.mymymy</a>
+                            </div>
+                            <div class=""></div>
+                        </div>
+                        <div class="both"></div>
+                    </header>
+                    <section class="img_post">
+                        <div class="_4rbun">
+                            <img src="https://instagram.fsgn2-3.fna.fbcdn.net/vp/006feb8fdbcf25e0fe4adc165b46ea5b/5B4DCBD3/t51.2885-15/sh0.08/e35/p640x640/24253677_1506217422799376_3077977489360814080_n.jpg">
+                        </div>
+                        <div class="_si7dy"></div>
+                    </section>
+                    <div style="padding: 0 16px;">
+                        <section class="_hmd6j _8oo9w">
+                            <a class="_eszkz _l9yih" href="#" role="button" aria-disabled="false">
+                                <span class="_8scx2 coreSpriteHeartOpen">Like</span>
+                            </a>
+                            <a class="_p6oxf _l9yih" href="#" role="button">
+                                <span class="_8scx2 coreSpriteComment">Comment</span>
+                            </a>
+                            <a class="_mpkky _l9yih" href="#" role="button" aria-disabled="false">
+                                <span class="_8scx2 coreSpriteSaveOpen">Save</span>
+                            </a>
+                        </section>
+                        <section class="likes">
+                            <div class="_3gwk6 _nt9ow">
+                                <a class="_nzn1h" href="/p/Bf8bZRXjHOX/liked_by/">
+                                    <span>520</span> likes
+                                </a>
+                            </div>
+                        </section>
+                        <ul class="commnet">
+                            <li class="">
+                                <a class="_2g7d5 notranslate _95hvo" title="" href="#">peece_of_leee</a>
+                                <span>
+                                    <span>
+                                        <span>
+                                           Have a good day <3
+
+                                        </span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="time">
+                            <a href="#">
+                                <time datetime="" title="">20 minutes hours ago</time>
+                            </a>
+                        </div>
+                        <section class="add_comment">
+                            <form>
+                                <textarea aria-label="Add a comment…" class="_bilrf" placeholder="Add a comment…" style="height: 18px;"></textarea>
+                            </form>
+                        </section>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+            <div class="content_right">
+                <div class="c_block_2">
+                    <div class="c_r_1">
+                        <div class="_c_r_1">
+                            <div class="_c_r_1_avartar">
+                                <canvas width="60" height="60" style="transform: translate(-5px, -5px); position: absolute; top: 0px; left: 0px; width: 60px; height: 60px;"></canvas>
+                                <span class="" style="width: 50px; height: 50px;"><img class="_rewi8" src="https://instagram.fsgn2-2.fna.fbcdn.net/vp/8a779abb2e322336dde6280d2b2d2b15/5B2B2380/t51.2885-19/s150x150/23667617_398159390621146_5403454112639483904_n.jpg"></span>
+                            </div>
+                            <div class="_c_r_1_user">
+                                <div class="_c_r_1_alias"><a href="https://www.instagram.com/piece_of_leee/">piece_of_leee</a></div>
+                                <div class="_c_r_1_name">My Le</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="c_r_2">
+                        <span class="left">Story</span>
+                        <a class="right" href="#">Watch All?</a>
+                        <div class="both"></div>
+                    </div>
+                    <div class="c_r_3" style="height: 272px; overflow-y: auto; overflow-x: hidden;">
+                        <div style="padding-top: 0px; padding-bottom: 0px;">
+                            <div class="_c_r_1">
+                                <div class="_c_r_1_avartar">
+                                    <canvas width="60" height="60"></canvas>
+                                    <span class="" style="width: 50px; height: 50px;"><img class="_rewi8" src="https://instagram.fsgn2-2.fna.fbcdn.net/vp/8a779abb2e322336dde6280d2b2d2b15/5B2B2380/t51.2885-19/s150x150/23667617_398159390621146_5403454112639483904_n.jpg"></span>
+                                </div>
+                                <div class="_c_r_1_user">
+                                    <div class="_c_r_1_alias"><a href="/piece_of_leee/">piece_of_leee</a></div>
+                                    <div class="_c_r_1_time">8 hours ago</div>
+                                </div>
+                            </div>
+                            <div class="_c_r_1">
+                                <div class="_c_r_1_avartar">
+                                    <canvas width="60" height="60"></canvas>
+                                    <span class="" style="width: 50px; height: 50px;"><img class="_rewi8" src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/ed2984914739f5ad7b308181c5ef9a5c/5B28CE9A/t51.2885-19/s150x150/25024737_2404136499812117_8978771347245105152_n.jpg"></span>
+                                </div>
+                                <div class="_c_r_1_user">
+                                    <div class="_c_r_1_alias"><a href="https://www.instagram.com/miiilinhhh/">miiilinhhh</a></div>
+                                    <div class="_c_r_1_time">1 hours ago</div>
+                                </div>
+                            </div>
+                            <div class="_c_r_1">
+                                <div class="_c_r_1_avartar">
+                                    <canvas width="60" height="60"></canvas>
+                                    <span class="" style="width: 50px; height: 50px;"><img class="_rewi8" src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/e8040c1e1d06a53b2d46d72a4870207b/5B3209F3/t51.2885-19/s150x150/20968603_1830498337261063_8562450649596297216_a.jpg" /></span>
+                                </div>
+                                <div class="_c_r_1_user">
+                                    <div class="_c_r_1_alias"><a href="https://www.instagram.com/sunnytrinh0712/">SunnyTrinh</a></div>
+                                    <div class="_c_r_1_time">5 minutes ago</div>
+                                </div>
+                            </div>
+
+                            <div class="_c_r_1">
+                                <div class="_c_r_1_avartar">
+                                    <canvas width="60" height="60"></canvas>
+                                    <span class="" style="width: 50px; height: 50px;"><img class="_rewi8" src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/f3d44f3ce267135ea5b8b8784d3e7df8/5B43AC40/t51.2885-19/s150x150/22426911_275731229604342_8626984912630579200_n.jpg" ></span>
+                                </div>
+                                <div class="_c_r_1_user">
+                                    <div class="_c_r_1_alias"><a href="https://www.instagram.com/ha.mymymy/">ha.mymymy</a></div>
+                                    <div class="_c_r_1_time">1 hours ago</div>
+                                </div>
+                            </div>
+                            <div class="_c_r_1">
+                                <div class="_c_r_1_avartar">
+                                    <canvas width="60" height="60"></canvas>
+                                    <span class="" style="width: 50px; height: 50px;"><img class="_rewi8" src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/8873d57c4f402c25798c582f4f24ccbe/5B45E063/t51.2885-19/s150x150/28152393_174074343234273_2116610211895574528_n.jpg"></span>
+                                </div>
+                                <div class="_c_r_1_user">
+                                    <div class="_c_r_1_alias"><a href="https://www.instagram.com/banhthixu1307/">banhthixu1307</a></div>
+                                    <div class="_c_r_1_time">5 hours ago </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <ul class="_links">
+                        <li>
+                            <a href="https://www.instagram.com/about/us/">About Us </a>
+                        </li>
+                        <li>
+                            <a href="https://help.instagram.com/">Support</a>
+                        </li>
+                        <li>
+                            <a href="http://blog.instagram.com/">Blog</a>
+                        </li>
+                        <li>
+                            <a href="https://instagram-press.com/">Press</a>
+                        </li>
+                        <li>
+                            <a href="/developer/">API</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/about/jobs/">Jobs</a>
+                        </li>
+                        <li>
+                            <a href="https://help.instagram.com/155833707900388">Privicy</a>
+                        </li>
+                        <li>
+                            <a href="https://help.instagram.com/478745558852511">Tems</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/explore/locations/">Directory</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/directory/profiles">Profile</a>
+                        </li>
+
+                        <li>
+                            <span>
+                                Language
+                                <select>
+                                    <option value="af">Afrikaans</option>
+                                    <option value="vn">Vietnamese</option>
+                                    <option value="da">Dansk</option>
+                                    <option value="de">Deutsch</option>
+                                    <option value="en">English</option>
+                                    <option value="es">Español (España)</option>
+                                    <option value="es-la">Español</option>
+                                    <option value="fi">Suomi</option>
+                                    <option value="fr">Français</option>
+                                    <option value="id">Bahasa Indonesia</option>
+                                    <option value="ms">Bahasa Melayu</option>
+                                    <option value="nb">Norsk</option>
+                                    <option value="nl">Nederlands</option>
+                                    <option value="pl">Polski</option>
+                                    <option value="pt-br">Português (Brasil)</option>
+                                    <option value="pt">Portugal</option>
+                                    <option value="sv">Svenska</option>
+                                    <option value="tl">Filipino</option>
+                                    <option value="tr">Türkçe</option>
+                                    <option value="hr">Hrvatski</option>
+                                    <option value="hu">Magyar</option>
+                                    <option value="fr-ca">Français (Canada)</option>
+                                    <option value="ro">Româna</option>
+
+                                </select>
+                            </span>
+                        </li>
+                    </ul>
+                    <span class="_1gmap">© 2018 Instagram</span>
+                </div>
+            </div>
+            <div class="both"></div>
+
+        </div>
+
+    </main>
+
+
+</body>
+</html>
